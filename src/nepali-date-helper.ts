@@ -52,7 +52,7 @@ const yearDaysMapping: number[][] = yearMonthDaysMapping.map((yearMappings: numb
 /**
  * Max possible Day
  */
-const MAX_DAY = 33238
+const MAX_DAY = 52295
 
 if (daysPassed !== MAX_DAY) {
   throw new Error('Invalid constant initialization for Nepali Date.')
@@ -83,7 +83,7 @@ export const KTM_TIMEZONE_OFFSET = 20700000
 /**
  * @ignore
  */
-export const EPOCH_YEAR = 2000
+export const EPOCH_YEAR = 1970
 /**
  * @ignore
  */
@@ -160,10 +160,10 @@ export const formatObj = {
  * Epoch in english date
  */
 const beginEnglish = {
-  year: 1943,
+  year: 1913,
   month: 3,
   date: 13,
-  day: 3,
+  day: 1,
 }
 
 /**
@@ -192,7 +192,7 @@ export function findPassedDays(year: number, month: number, date: number) {
     }
     return daysPassed
   } catch {
-    throw new Error("The date doesn't fall within 2000/01/01 - 2090/12/30")
+    throw new Error("The date doesn't fall within 1970/01/01 - 2090/12/30")
   }
 }
 
